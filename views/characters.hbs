@@ -1,0 +1,31 @@
+﻿<h1>{{title}}</h1>
+
+    <div class="card-deck">
+{{#each data}}
+        <div class="card mb-4">
+            <div class="card-header">
+                <b>Name: </b><a href="/achievements/{{this.id}}">{{this.first}} {{this.last}}</a>
+            </div>
+            <div class="card-body">
+                
+                {{#if this.isEquiped}}
+                    <div><b>Gear:</b>
+                        <ul class="list-group">{{#each this.equiped}}
+                            <li class="list-group-item">
+                                {{this}}
+                            </li>
+                        {{/each}}
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                {{/if}}<div><b>Race: </b>{{this.race}}</div>
+                <div>
+                    <b>age:</b>{{this.age}}</div>
+            </div>
+            </div>
+        </div>
+{{/each}}
+    </div>
+
+<a href="/" class="btn">back home</a>
+<a href="/addAchievement" class="btn btn-primary">Add Achievements</a>

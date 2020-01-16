@@ -1,0 +1,19 @@
+﻿<form action="/addAchievement" method="post">
+    <div  class="card">
+        <div class="card-body">
+        <select name="characterId">
+            {{#each data}}
+                <option value="{{this.id}}">{{this.first}} {{this.last}}</option>
+            {{/each}}
+      </select>
+    </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+        <input type="text" class="form-control" placeholder="Enter Achievement" name="achievementName">
+    </div>
+    </div>
+    <div>
+        <button type ="submit">Add</button>
+    </div>
+</form>
